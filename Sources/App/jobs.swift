@@ -20,7 +20,9 @@ public func jobs(_ services: inout Services, persistenceLayer: JobsPersistenceLa
     services.register(emailService)
     
     //Register jobs
-    EmailJob.register()
+    var jobsConfig = JobsConfig()
+    jobsConfig.add(EmailJob.self)
+    services.register(jobsConfig)
     
     services.register { _ -> CommandConfig in
         var commandConfig = CommandConfig.default()
