@@ -8,9 +8,16 @@ struct EmailJob: Job {
     let from: String
     let message: String
     
-    func dequeue(context: JobContext, worker: EventLoopGroup) throws -> EventLoopFuture<Void> {
-        guard let emailService = context.emailService else { throw Abort(.internalServerError, reason: "Register email service") }
-        let string = emailService.send(to: to, from: from, message: message)
+    func dequeue(context: JobContext, worker: EventLoopGroup) -> EventLoopFuture<Void> {
+        print(to)
+        print(from)
+        print(message)
+        
+        return worker.future()
+    }
+    
+    func error(context: JobContext, error: Error, worker: EventLoopGroup) -> EventLoopFuture<Void> {
+        print(error)
         return worker.future()
     }
 }
