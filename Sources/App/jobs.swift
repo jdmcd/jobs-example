@@ -7,7 +7,7 @@
 
 import Foundation
 import Vapor
-import Jobs
+import RedisJobs
 
 public func jobs(_ services: inout Services, persistenceLayer: JobsPersistenceLayer) throws {
     /// Jobs
