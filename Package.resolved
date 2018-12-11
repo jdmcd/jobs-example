@@ -50,9 +50,9 @@
         "package": "Jobs",
         "repositoryURL": "https://github.com/vapor-community/jobs.git",
         "state": {
-          "branch": null,
-          "revision": "a7d3eb6309b37ffa0bfee30e306f1437879fef32",
-          "version": "0.1.0"
+          "branch": "master",
+          "revision": "0111fea237e020b3193e6c6f191873e74dc2b37a",
+          "version": null
         }
       },
       {
@@ -77,9 +77,9 @@
         "package": "RedisJobs",
         "repositoryURL": "https://github.com/vapor-community/redis-jobs.git",
         "state": {
-          "branch": null,
-          "revision": "673b8762e2860ac1636d07a17f2d84e8fb6bb0de",
-          "version": "0.1.2"
+          "branch": "master",
+          "revision": "18b1439e1869b6716e55bb94dda3f086388552ee",
+          "version": null
         }
       },
       {
@@ -107,6 +107,15 @@
           "branch": null,
           "revision": "a20e129c22ad00a51c902dca54a5456f90664780",
           "version": "1.12.0"
+        }
+      },
+      {
+        "package": "swift-nio-extras",
+        "repositoryURL": "https://github.com/apple/swift-nio-extras.git",
+        "state": {
+          "branch": null,
+          "revision": "28154e042e1de46c0fb7da93f9b6d6518ef09156",
+          "version": "0.1.2"
         }
       },
       {

@@ -9,20 +9,29 @@ import Foundation
 import Vapor
 import RedisJobs
 
-public func jobs(_ services: inout Services, persistenceLayer: JobsPersistenceLayer) throws {
+public func jobs(_ services: inout Services) throws {
     /// Jobs
-    let jobsProvider = JobsProvider(persistenceLayer: persistenceLayer, refreshInterval: .seconds(1))
+    let jobsProvider = JobsProvider(refreshInterval: .seconds(10))
     try services.register(jobsProvider)
     
     let emailService = EmailService()
+    services.register { _ -> EmailService in
+        return emailService
+    }
+    
     var jobContext = JobContext()
     jobContext.emailService = emailService
-    services.register(emailService)
+    
+    services.register { _ -> JobContext in
+        return jobContext
+    }
     
     //Register jobs
-    var jobsConfig = JobsConfig()
-    jobsConfig.add(EmailJob.self)
-    services.register(jobsConfig)
+    services.register { _ -> JobsConfig in
+        var jobsConfig = JobsConfig()
+        jobsConfig.add(EmailJob.self)
+        return jobsConfig
+    }
     
     services.register { _ -> CommandConfig in
         var commandConfig = CommandConfig.default()

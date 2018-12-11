@@ -28,5 +28,9 @@ public func configure(_ config: inout Config, _ env: inout Environment, _ servic
     databaseConfig.add(database: redisConfig, as: .redis)
     services.register(databaseConfig)
     
-    try jobs(&services, persistenceLayer: redisConfig)
+    services.register(JobsPersistenceLayer.self) { container -> RedisJobs in
+        return RedisJobs(database: redisConfig, eventLoop: container.next())
+    }
+    
+    try jobs(&services)
 }
