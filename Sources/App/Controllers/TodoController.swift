@@ -14,6 +14,6 @@ final class TodoController: RouteCollection {
     
     func addToQueue(req: Request) throws -> Future<HTTPStatus> {
         let job = EmailJob(maxRetryCount: 0, to: "to@to.com", from: "from@from.com", message: "message")
-        return try queue.dispatch(job: job).transform(to: .ok)
+        return queue.dispatch(job: job).transform(to: .ok)
     }
 }
