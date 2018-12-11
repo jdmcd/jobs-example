@@ -3,7 +3,6 @@ import Jobs
 import Vapor
 
 struct EmailJob: Job {
-    var maxRetryCount = 0
     let to: String
     let from: String
     let message: String
@@ -13,7 +12,7 @@ struct EmailJob: Job {
         print(from)
         print(message)
         
-        return worker.future()
+        return worker.future(error: Abort(.badRequest))
     }
     
     func error(context: JobContext, error: Error, worker: EventLoopGroup) -> EventLoopFuture<Void> {
