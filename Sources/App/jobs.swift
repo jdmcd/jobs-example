@@ -11,7 +11,7 @@ import Jobs
 
 public func jobs(_ services: inout Services, persistenceLayer: JobsPersistenceLayer) throws {
     /// Jobs
-    let jobsProvider = JobsProvider(persistenceLayer: persistenceLayer, refreshInterval: .seconds(10))
+    let jobsProvider = JobsProvider(persistenceLayer: persistenceLayer, refreshInterval: .seconds(1))
     try services.register(jobsProvider)
     
     let emailService = EmailService()

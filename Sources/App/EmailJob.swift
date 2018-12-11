@@ -12,7 +12,7 @@ struct EmailJob: Job {
         print(from)
         print(message)
         
-        return worker.future(error: Abort(.badRequest))
+        return worker.future()
     }
     
     func error(context: JobContext, error: Error, worker: EventLoopGroup) -> EventLoopFuture<Void> {
