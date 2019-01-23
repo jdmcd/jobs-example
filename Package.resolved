@@ -51,7 +51,16 @@
         "repositoryURL": "https://github.com/vapor-community/jobs.git",
         "state": {
           "branch": "master",
-          "revision": "12700215fab364d84d094787ebee43a3fed3ed67",
+          "revision": "9cd8f5b026b989dcb6ca77c86b8fa0e758b17e84",
+          "version": null
+        }
+      },
+      {
+        "package": "JobsRedisDriver",
+        "repositoryURL": "https://github.com/vapor-community/jobs-redis-driver.git",
+        "state": {
+          "branch": "master",
+          "revision": "806a8cf9588ff0f4e6228bcb0502a7f38a43f3f6",
           "version": null
         }
       },
@@ -71,15 +80,6 @@
           "branch": null,
           "revision": "2fb20632db3ad86e2b3596cd34605f694a92c177",
           "version": "3.0.2"
-        }
-      },
-      {
-        "package": "RedisJobs",
-        "repositoryURL": "https://github.com/vapor-community/redis-jobs.git",
-        "state": {
-          "branch": "master",
-          "revision": "db82877f4f5af7a4c13271b8ec9608b6182f7962",
-          "version": null
         }
       },
       {
