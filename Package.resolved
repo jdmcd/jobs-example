@@ -51,7 +51,7 @@
         "repositoryURL": "https://github.com/vapor-community/jobs.git",
         "state": {
           "branch": "master",
-          "revision": "2c34e255f725d84eafeef078694021c5d61cd22b",
+          "revision": "12700215fab364d84d094787ebee43a3fed3ed67",
           "version": null
         }
       },
@@ -78,7 +78,7 @@
         "repositoryURL": "https://github.com/vapor-community/redis-jobs.git",
         "state": {
           "branch": "master",
-          "revision": "3bf2ac95a56dd767ec70b830dcfbf6cf8f7421c2",
+          "revision": "512645cac73bae24c4d4dc97e43469c4adbe1c7e",
           "version": null
         }
       },

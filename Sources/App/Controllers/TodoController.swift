@@ -13,7 +13,7 @@ final class TodoController: RouteCollection {
     }
     
     func addToQueue(req: Request) throws -> Future<HTTPStatus> {
-        let job = EmailJob(to: "to@to.com", from: "from@from.com", message: "message")
+        let job = EmailJob(to: "to@to.com", from: "from@from.com", message: "\(Int.random(in: 0...100))")
         return queue.dispatch(job: job, maxRetryCount: 10).transform(to: .ok)
     }
 }
