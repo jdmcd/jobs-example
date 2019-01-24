@@ -8,15 +8,10 @@ struct EmailJob: Job {
     let message: String
     
     func dequeue(context: JobContext, worker: EventLoopGroup) -> EventLoopFuture<Void> {
-        print(to)
-        print(from)
-        print(message)
-        
-        return worker.future()
+        return worker.future(error: Abort(.badRequest, reason: "Something went wrong"))
     }
     
     func error(context: JobContext, error: Error, worker: EventLoopGroup) -> EventLoopFuture<Void> {
-        print(error)
         return worker.future()
     }
 }

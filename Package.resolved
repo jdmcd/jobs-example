@@ -50,18 +50,18 @@
         "package": "Jobs",
         "repositoryURL": "https://github.com/vapor-community/jobs.git",
         "state": {
-          "branch": "master",
-          "revision": "9cd8f5b026b989dcb6ca77c86b8fa0e758b17e84",
-          "version": null
+          "branch": null,
+          "revision": "c897bd3ed82dab8b72630516876845a1dd5a22a3",
+          "version": "0.2.0"
         }
       },
       {
         "package": "JobsRedisDriver",
         "repositoryURL": "https://github.com/vapor-community/jobs-redis-driver.git",
         "state": {
-          "branch": "master",
-          "revision": "806a8cf9588ff0f4e6228bcb0502a7f38a43f3f6",
-          "version": null
+          "branch": null,
+          "revision": "607d74ad082aedbe29bdc594ff97460371b5cbe6",
+          "version": "0.2.0"
         }
       },
       {
@@ -78,8 +78,8 @@
         "repositoryURL": "https://github.com/vapor/redis.git",
         "state": {
           "branch": null,
-          "revision": "2fb20632db3ad86e2b3596cd34605f694a92c177",
-          "version": "3.0.2"
+          "revision": "cec3ee1eb226f2323947016be9db626fe6d3fe37",
+          "version": "3.0.3"
         }
       },
       {
@@ -107,15 +107,6 @@
           "branch": null,
           "revision": "03c541a24dd0558c942b15d8464eb75d70a921c4",
           "version": "1.12.1"
-        }
-      },
-      {
-        "package": "swift-nio-extras",
-        "repositoryURL": "https://github.com/apple/swift-nio-extras.git",
-        "state": {
-          "branch": null,
-          "revision": "28154e042e1de46c0fb7da93f9b6d6518ef09156",
-          "version": "0.1.2"
         }
       },
       {

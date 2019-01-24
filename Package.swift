@@ -5,7 +5,7 @@ let package = Package(
     name: "JobsTesting",
     dependencies: [
         .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
-        .package(url: "https://github.com/vapor-community/jobs-redis-driver.git", .branch("master"))
+        .package(url: "https://github.com/vapor-community/jobs-redis-driver.git", from: "0.2.0")
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor", "JobsRedisDriver"]),
