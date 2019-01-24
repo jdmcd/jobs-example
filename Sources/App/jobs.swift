@@ -7,7 +7,7 @@
 
 import Foundation
 import Vapor
-import RedisJobs
+import Jobs
 
 public func jobs(_ services: inout Services) throws {
     /// Jobs
