@@ -2,16 +2,13 @@ import Foundation
 import Jobs
 import Vapor
 
-struct EmailJob: Job {
+struct Email: Codable, JobData {
     let to: String
-    let from: String
-    let message: String
-    
-    func dequeue(context: JobContext, worker: EventLoopGroup) -> EventLoopFuture<Void> {
-        return worker.future(error: Abort(.badRequest, reason: "Something went wrong"))
-    }
-    
-    func error(context: JobContext, error: Error, worker: EventLoopGroup) -> EventLoopFuture<Void> {
-        return worker.future()
+}
+
+struct EmailJob: Job {
+    func dequeue(_ context: JobContext, _ data: Email) -> EventLoopFuture<Void> {
+        print(data)
+        return context.eventLoop.future()
     }
 }

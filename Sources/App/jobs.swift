@@ -19,17 +19,17 @@ public func jobs(_ services: inout Services) throws {
         return emailService
     }
     
-    var jobContext = JobContext()
-    jobContext.emailService = emailService
+    services.register { container -> JobContext in
+        var jobContext = JobContext(eventLoop: container.eventLoop)
+        jobContext.emailService = emailService
     
-    services.register { _ -> JobContext in
         return jobContext
     }
     
     //Register jobs
     services.register { _ -> JobsConfig in
         var jobsConfig = JobsConfig()
-        jobsConfig.add(EmailJob.self)
+        jobsConfig.add(EmailJob())
         return jobsConfig
     }
     
