@@ -1,11 +1,18 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
     name: "JobsTesting",
+    platforms: [
+       .macOS(.v10_14)
+    ],
+    products: [
+        .executable(name: "Run", targets: ["Run"]),
+        .library(name: "App", targets: ["App"]),
+    ],
     dependencies: [
-        .package(url: "https://github.com/vapor/vapor.git", from: "3.0.0"),
-        .package(url: "https://github.com/vapor-community/jobs-redis-driver.git", from: "0.2.1")
+        .package(url: "https://github.com/vapor/vapor.git", from: "4.0.0-beta.3.1"),
+        .package(url: "https://github.com/vapor/jobs-redis-driver.git", from: "1.0.0-beta.2.1.0")
     ],
     targets: [
         .target(name: "App", dependencies: ["Vapor", "JobsRedisDriver"]),
